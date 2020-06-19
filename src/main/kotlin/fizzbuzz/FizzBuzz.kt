@@ -3,12 +3,15 @@ package fizzbuzz
 class FizzBuzz {
     fun say(number: Int): String {
         var result = ""
-        if (number isDivisibleBy 3) {
-            result += "Fizz"
+
+        val divAndWord = DivAndWord(divisor = 3, word = "Fizz")
+        if (number isDivisibleBy divAndWord.divisor) {
+            result += divAndWord.word
         }
 
-        if (number isDivisibleBy 5) {
-            result += "Buzz"
+        val buzzDivAndWord = DivAndWord(divisor = 5, word = "Buzz")
+        if (number isDivisibleBy buzzDivAndWord.divisor) {
+            result += buzzDivAndWord.word
         }
 
         if(result.isNotEmpty())
