@@ -2,8 +2,10 @@ package fizzbuzz
 
 class FizzBuzz {
     fun say(number: Int): String {
-        if (number % 3 == 0) return "Fizz"
-        if (number % 5 == 0) return "Buzz"
+        if (number isDivisibleBy 3) return "Fizz"
+        if (number isDivisibleBy 5) return "Buzz"
         return number.toString()
     }
+
+    private infix fun Int.isDivisibleBy(number: Int) = this % number == 0
 }
