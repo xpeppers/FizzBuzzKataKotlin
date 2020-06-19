@@ -2,7 +2,7 @@ package fizzbuzz
 
 class DivisibilityConversionRule(private val divisor: Int, private val word: String): ConversionRule {
 
-    override fun convertOrEmpty(number: Int) = if (number isDivisibleBy divisor) word else ""
+    override fun convertOrEmpty(number: Int): String? = if (number isDivisibleBy divisor) word else null
 
     private infix fun Int.isDivisibleBy(number: Int) = this % number == 0
 }

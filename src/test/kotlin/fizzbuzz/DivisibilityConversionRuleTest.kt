@@ -6,10 +6,10 @@ import org.junit.Test
 class DivisibilityConversionRuleTest {
 
     @Test
-    fun `returns empty string with a non matching number`() {
+    fun `returns null with a non matching number`() {
         val rule = DivisibilityConversionRule(3, "Fizz")
 
-        assertEquals("", rule.convertOrEmpty(1))
+        assertEquals(null, rule.convertOrEmpty(1))
     }
 
     @Test
