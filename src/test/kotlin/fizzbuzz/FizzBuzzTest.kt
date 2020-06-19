@@ -11,23 +11,18 @@ class FizzBuzzTest {
     )
 
     @Test
-    fun `say the number when there are no rule matching`() {
-        assertEquals("1", FizzBuzz(rules).say(1))
-        assertEquals("2", FizzBuzz(rules).say(2))
+    fun `say the number when there are no rules matching`() {
+        assertEquals("4", FizzBuzz(rules).say(4))
     }
 
     @Test
-    fun `say the matched word when there is only one rule matching`() {
+    fun `say the matched word when the rule matches`() {
         assertEquals("Fizz", FizzBuzz(rules).say(3))
-        assertEquals("Fizz", FizzBuzz(rules).say(3 * 2))
-        assertEquals("Buzz", FizzBuzz(rules).say(5))
-        assertEquals("Buzz", FizzBuzz(rules).say(5 * 2))
     }
 
     @Test
     fun `concatenate all matched words when there are many rules matching`() {
         assertEquals("FizzBuzz", FizzBuzz(rules).say(3 * 5))
-        assertEquals("FizzBuzz", FizzBuzz(rules).say(3 * 5 * 2))
     }
 
     @Test
