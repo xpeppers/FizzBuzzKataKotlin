@@ -25,4 +25,11 @@ class DivisibileConversionRuleTest {
 
         assertEquals("Fizz", rule.convertOrEmpty(6))
     }
+
+    @Test
+    fun `returns the word if contains the number`() {
+        val rule = DivisibileConversionRule(3, "Fizz")
+
+        assertEquals("Fizz", rule.convertOrEmpty(37))
+    }
 }
