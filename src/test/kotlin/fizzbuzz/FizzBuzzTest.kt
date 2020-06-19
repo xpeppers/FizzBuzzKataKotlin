@@ -18,6 +18,7 @@ class FizzBuzzTest {
     @Test
     fun `say the matched word when the rule matches`() {
         assertEquals("Fizz", FizzBuzz(rules).say(3))
+        assertEquals("Buzz", FizzBuzz(rules).say(5))
     }
 
     @Test
