@@ -1,14 +1,10 @@
 package fizzbuzz
 
-class FizzBuzz {
+class FizzBuzz(private val rules: List<DivisibilityConversionRule>) {
+
     fun say(number: Int): String {
-        val conversionRules = listOf(
-                DivisibilityConversionRule(divisor = 3, word = "Fizz"),
-                DivisibilityConversionRule(divisor = 5, word = "Buzz")
-        )
+        val result = rules.joinToString("") { it.convertOrEmpty(number) }
 
-        val result = conversionRules.joinToString("") { it.convertOrEmpty(number) }
-
-        return if(result.isNotEmpty()) result else number.toString()
+        return if (result.isNotEmpty()) result else number.toString()
     }
 }
