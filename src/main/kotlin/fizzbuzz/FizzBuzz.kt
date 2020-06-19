@@ -2,9 +2,18 @@ package fizzbuzz
 
 class FizzBuzz {
     fun say(number: Int): String {
-        if (number isDivisibleBy 3 && number isDivisibleBy 5) return "FizzBuzz"
-        if (number isDivisibleBy 3) return "Fizz"
-        if (number isDivisibleBy 5) return "Buzz"
+        var result = ""
+        if (number isDivisibleBy 3) {
+            result += "Fizz"
+        }
+
+        if (number isDivisibleBy 5) {
+            result += "Buzz"
+        }
+
+        if(result.isNotEmpty())
+            return result
+
         return number.toString()
     }
 
