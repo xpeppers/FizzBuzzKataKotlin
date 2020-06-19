@@ -35,4 +35,9 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz().say(6))
     }
 
+    @Test
+    fun `say Buzz when number is 10`() {
+        assertEquals("Buzz", FizzBuzz().say(10))
+    }
+
 }
