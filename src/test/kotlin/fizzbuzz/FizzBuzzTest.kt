@@ -32,7 +32,7 @@ class FizzBuzzTest {
     @Test
     fun `say Buzz for multiples of 5`() {
         assertEquals("Buzz", FizzBuzz().say(5 * 2))
-        assertEquals("Buzz", FizzBuzz().say(5 * 3))
         assertEquals("Buzz", FizzBuzz().say(5 * 4))
+        assertEquals("Buzz", FizzBuzz().say(5 * 5))
     }
 }
