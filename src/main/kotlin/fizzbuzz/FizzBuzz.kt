@@ -2,6 +2,7 @@ package fizzbuzz
 
 class FizzBuzz {
     fun say(number: Int): String {
+        if (number % 5 == 0) return "Buzz"
         if (number == 5) return "Buzz"
         if (number.isMultipleOf3()) return "Fizz"
         return number.toString()
