@@ -27,5 +27,12 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz().say(6))
     }
 
+    @Test
+    fun `say Fizz for multiples of 3`() {
+        assertEquals("Fizz", FizzBuzz().say(3 * 2))
+        assertEquals("Fizz", FizzBuzz().say(3 * 3))
+        assertEquals("Fizz", FizzBuzz().say(3 * 4))
+    }
+
 
 }
