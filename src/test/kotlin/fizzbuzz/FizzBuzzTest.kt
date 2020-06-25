@@ -28,6 +28,4 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz().say(3 * 3))
         assertEquals("Fizz", FizzBuzz().say(3 * 4))
     }
-
-
 }
