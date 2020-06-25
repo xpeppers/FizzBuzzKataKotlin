@@ -2,9 +2,10 @@ package fizzbuzz
 
 class FizzBuzz {
     fun say(number: Int): String {
-        if (number == 5) return "Buzz"
-        if (number == 3) return "Fizz"
-        return number.toString()
+        return when (number) {
+            5 -> "Buzz"
+            3 -> "Fizz"
+            else -> number.toString()
+        }
     }
-
 }
