@@ -2,11 +2,10 @@ package fizzbuzz
 
 class FizzBuzz {
     fun say(number: Int): String {
-        if (number % 5 == 0) return "Buzz"
-        if (number == 5) return "Buzz"
-        if (number.isMultipleOf3()) return "Fizz"
+        if (number isMultipleOf 5) return "Buzz"
+        if (number isMultipleOf 3) return "Fizz"
         return number.toString()
     }
 
-    private fun Int.isMultipleOf3() = this % 3 == 0
+    private infix fun Int.isMultipleOf(number: Int) = this % number == 0
 }
